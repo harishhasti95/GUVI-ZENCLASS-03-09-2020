@@ -1,0 +1,21 @@
+Differences between HTTP 1.1 and HTTP2:
+1) Http 1.1 sends the data sequentially, but Http 2 sends all at once.
+2) Multi plexing - HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it. In contrast, HTTP/2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource. HTTP/2 does this by splitting data into binary-code messages and numbering these messages so that the client knows which stream each binary message belongs to.
+3) Http 2 uses HPACK type of advanced compression to compress the request message.
+
+
+GET Method - GET Method is used to request data from a specified resource.
+GET requests can be cached
+GET requests remain in the browser history
+GET requests can be bookmarked
+GET requests should never be used when dealing with sensitive data
+GET requests have length restrictions
+GET requests are only used to request data (not modify)
+
+POST Method - POST is used to send data to a server to create/update a resource.
+POST requests are never cached
+POST requests do not remain in the browser history
+POST requests cannot be bookmarked
+POST requests have no restrictions on data length
+
+
